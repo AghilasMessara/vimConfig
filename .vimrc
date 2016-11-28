@@ -1,3 +1,4 @@
+"{{{Vundle configuration
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
@@ -14,12 +15,15 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'eparreno/vim-l9'
-
+Plugin 'vim-airline/vim-airline'
 Plugin 'sickill/vim-monokai'
+Plugin 'mxw/vim-jsx'
+Plugin 'jistr/vim-nerdtree-tabs'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+"}}}
 
 "{{{Auto Commands
 
@@ -311,9 +315,7 @@ nnoremap <leader>par :%s/^>$//<CR>
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPCurWD'
 
-"nmap <leader>d :NERDTreeToggle<CR>
-nmap <C-d> :NERDTreeToggle<CR>
-"nmap <leader>l :NERDTreeFind<CR>
+nmap <C-d> :NERDTreeTabsToggle<CR>
 nmap <C-l> :NERDTreeFind<CR>
 
 "}}}
