@@ -11,14 +11,19 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
-Plugin 'kien/ctrlp.vim'
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'eparreno/vim-l9'
 Plugin 'vim-airline/vim-airline'
 Plugin 'sickill/vim-monokai'
 Plugin 'mxw/vim-jsx'
-Plugin 'jistr/vim-nerdtree-tabs'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'vim-scripts/taglist.vim'
+Plugin 'chazy/cscope_maps'
+Plugin 'akhaku/vim-java-unused-imports'
+Plugin 'vim-scripts/mcant.vim'
+Plugin 'Dica-Developer/vim-jdb'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -142,7 +147,8 @@ let g:rct_completion_use_fri = 1
 "let g:Tex_DefaultTargetFormat = "pdf"
 let g:Tex_ViewRule_pdf = "kpdf"
 
-let g:NERDTreeDirArrows=0
+let g:NERDTreeDirArrows = 1
+let g:NERDTreeIgnore = ['\.pyc$']
 set tags=tags;/
 
 let g:ctrlp_custom_ignore = 'node_modules\|bin\|gen'
@@ -158,6 +164,7 @@ set relativenumber
 
 set encoding=utf-8
 set fileencoding=utf-8
+let g:nerdtree_tabs_open_on_gui_startup=0
 
 " }}}
 
@@ -315,7 +322,7 @@ nnoremap <leader>par :%s/^>$//<CR>
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlPCurWD'
 
-nmap <C-d> :NERDTreeTabsToggle<CR>
+nmap <C-d> :NERDTreeToggle<CR>
 nmap <C-l> :NERDTreeFind<CR>
 
 "}}}
